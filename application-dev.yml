@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: question-service2
   jpa:
     hibernate:
       ddl-auto: update
