@@ -1,4 +1,19 @@
 spring:
-  application:
-    name: config-server-dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: admin
+    url: jdbc:mysql://localhost:3306/microservice_quiz?createDatabaseIfNotExist=true&serverTimezone=UTC
+
+eureka:
+  client:
+    service-url:http://localhost:8761/
+
 
